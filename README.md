@@ -1,2 +1,2 @@
 # AIJobPortalForFreshers
-Insternship and Job Related to Data Science, Machine Learning &amp; AI
+Internships and Jobs For Freshers In Data Science, Machine Learning &amp; AI
