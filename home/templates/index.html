@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block start %}
 
-<div class="container-xxl py-5 bg-primary hero-header mb-5">
-    <div class="container my-5 py-5 px-lg-5">
+<div class="container bg-primary hero-header">
+    <div class="container py-2 px-lg-5">
       <div class="row g-5 py-5">
         <div class="col-lg-6 text-center text-lg-start">
           <h1 class="text-white mb-4">Our Platform is dedicated to Freshers Jobs & Internships</h1>
@@ -14,8 +14,6 @@
       </div>
     </div>
   </div>
-<!-- Navbar & Hero End -->
-
 
 <!-- Full Screen Search Start -->
 <div class="modal fade" id="searchModal" tabindex="-1">
@@ -39,8 +37,8 @@
 
 
 <!-- About Start -->
-<div class="container-xxl py-5">
-    <div class="container px-lg-5">
+<div class="container">
+    <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="section-title position-relative mb-4 pb-2">
@@ -73,8 +71,8 @@
 
 
 <!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container px-lg-5">
+<div class="container">
+    <div class="container">
         <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="position-relative d-inline text-primary ps-4">Our Services</h6>
             <h4 class="mt-2">Experience excellence through our comprehensive range of services</h4>
@@ -125,65 +123,49 @@
 
 
 <!-- Testimonial Start -->
-<div class="container-xxl bg-primary testimonial py-5 my-2 wow fadeInUp" data-wow-delay="0.1s">
+<div class="bg-primary testimonial py-2">
     <h6 class="text-center text-white">Our Customers</h6>
     <h4 class="mt-2 text-center text-white">Explore the success stories of our valued Customers</h4>
     <div class="container py-5 px-lg-5">
-        <div class="owl-carousel testimonial-carousel">
-            <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                <i class="fa fa-quote-left fa-2x mb-3"></i>
-                <p>
-                    As an aspiring developer, Your BiteBase has been my go-to resource for discovering 
-                    the latest hackathons and staying informed about industry trends.
-                </p>
+        <div class="testimonial-carousel">
+            <div class="testimonial-item text-white p-4">
+                <!-- <i class="fa fa-quote-left fa-2x mb-3"></i> -->
+                <p>As an aspiring developer, Your BiteBase has been my go-to resource for discovering the latest hackathons and staying informed about industry trends.</p>
                 <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../static/img/ankita.png"
-                        style="width: 50px; height: 50px;">
+                    <img class="img-fluid rounded-circle" src="../static/img/ankita.png" alt="Ankita Pancholi">
                     <div class="ps-3">
                         <h6 class="text-white mb-1">Ankita Pancholi</h6>
                         <small>Software Developer</small>
                     </div>
                 </div>
             </div>
-            <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                <i class="fa fa-quote-left fa-2x mb-3"></i>
-                <p>
-                    BiteBase has revolutionized the way I stay updated on the tech landscape. 
-                    The extensive coverage of hackathons and breaking news, all presented in a friendly manner.
-                </p>
+            <div class="testimonial-item text-white p-4">
+                <!-- <i class="fa fa-quote-left fa-2x mb-3"></i> -->
+                <p>BiteBase has revolutionized the way I stay updated on the tech landscape. The extensive coverage of hackathons and breaking news is invaluable.</p>
                 <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../static/img/pankaj.png"
-                        style="width: 50px; height: 50px;">
+                    <img class="img-fluid rounded-circle" src="../static/img/pankaj.png" alt="Raushan Kumar">
                     <div class="ps-3">
                         <h6 class="text-white mb-1">Raushan Kumar</h6>
                         <small>Computer Scientist</small>
                     </div>
                 </div>
             </div>
-            <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                <i class="fa fa-quote-left fa-2x mb-3"></i>
-                <p>
-                    Finding the right job in the tech world can be challenging, but BiteBase simplified the process for me.
-                    I am very thankful to BiteBase Team.
-                </p>
+            <div class="testimonial-item text-white p-4">
+                <!-- <i class="fa fa-quote-left fa-2x mb-3"></i> -->
+                <p>Finding the right job in the tech world can be challenging, but BiteBase simplified the process for me. I am very thankful to the team.</p>
                 <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../static/img/raushan.png"
-                        style="width: 50px; height: 50px;">
+                    <img class="img-fluid rounded-circle" src="../static/img/raushan.png" alt="Raushan Kumar">
                     <div class="ps-3">
                         <h6 class="text-white mb-1">Raushan Kumar</h6>
                         <small>Web Developer</small>
                     </div>
                 </div>
             </div>
-            <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                <i class="fa fa-quote-left fa-2x mb-3"></i>
-                <p>
-                    Finding the right job in the tech world can be challenging, but Your Global Hub simplified the process for me.
-                    BiteBase's curated content and real-time data helped me a lot.
-                </p>                
+            <div class="testimonial-item text-white p-4">
+                <!-- <i class="fa fa-quote-left fa-2x mb-3"></i> -->
+                <p>Your Global Hub simplified the job search process. BiteBase's curated content and real-time data helped me land my current role.</p>
                 <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../static/img/ajeet.png"
-                        style="width: 50px; height: 50px;">
+                    <img class="img-fluid rounded-circle" src="../static/img/ajeet.png" alt="Ajeet Kumar">
                     <div class="ps-3">
                         <h6 class="text-white mb-1">Ajeet Kumar</h6>
                         <small>Backend Developer</small>
@@ -196,8 +178,8 @@
 <!-- Testimonial End -->
 
 
-<div class="container-xxl py-5">
-    <div class="container px-lg-5">
+<div class="container">
+    <div class="container">
         <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="position-relative d-inline text-primary ps-4">Our Motivation</h6>
             <h4 class="mt-2">Driven by Innovations in Computer Science</h4>
