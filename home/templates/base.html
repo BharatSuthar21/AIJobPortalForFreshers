@@ -50,15 +50,15 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto py-0">
             <a href="/" class="nav-item nav-link ">Home</a>
-            <a href="/job/" class="nav-item nav-link ">Jobs</a>
+            <a href="/job/" class="nav-item nav-link ">Fresher Jobs</a>
             <a href="/internship/" class="nav-item nav-link ">Internships</a>
             <a href="/contest/" class="nav-item nav-link">Competitions</a>
             <a href="/news/" class="nav-item nav-link ">News</a>
+            <a href="/contact/" class="nav-item nav-link ">Contact Us</a>
           </div>
           {% if request.user.is_authenticated %}
           <a href="#" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">{{request.user.first_name}}</a>
           <a href="/logout/" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Logout</a>
-          <!-- <a href=""><i class="bi bi-box-arrow-right">ff</i></a> -->
           {% else %}
           <a href="/signup/" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">SignUp</a>
           {% endif %}

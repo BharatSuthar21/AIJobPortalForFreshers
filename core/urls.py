@@ -26,13 +26,15 @@ urlpatterns = [
     path('', home, name='home'),
 
     path('job/', job, name='job'),
-    path('internship/', job, name='internship'),
+    path('internship/', internship, name='internship'),
     path("contest/", contest, name='contest'),
     path("news/", news, name='news'),
 
     path("login/", login_page, name='login'),
     path("logout/", logout_page, name='logout'),
     path("signup/", signup, name='signup'),
+
+    path("contact/", contact, name='contact'),
 
     path('admin/', admin.site.urls),
 ]

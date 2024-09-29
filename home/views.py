@@ -29,19 +29,26 @@ def job(request):
 
 
 @login_required(login_url="/login/")
+def internship(request):
+    jobs_from_database = Job.objects.all()
+    return render(request, 'internship.html', context={'job_list_all' : jobs_from_database})
+
+
+@login_required(login_url="/login/")
 def news(request):
     news_obj = User.objects.filter(username = 'username')
 
     # When you use razorpay API key then uncomment these three lines as well as keep context line which have payments.
-    client = razorpay.Client(auth = (settings.KEY_ID, settings.SECRET_KEY))
-    payment = client.order.create({'amount' :100, 'currency':'INR', 'payment_capture':1})
-    news_obj.razor_pay_order_id = payment['id']
+    # client = razorpay.Client(auth = (settings.KEY_ID, settings.SECRET_KEY))
+    # payment = client.order.create({'amount' :100, 'currency':'INR', 'payment_capture':1})
+    # news_obj.razor_pay_order_id = payment['id']
 
     news_from_database = News.objects.all()[101:161]
     ## ads_news = Add_your_news.objects.all().order_by('-pk').first()  #to find latest insertiond
     ads_news = Add_your_news.objects.all()[1]
 
-    context={'news_list_all' : news_from_database, 'ads_news' : ads_news, 'payment' : payment}
+    # context={'news_list_all' : news_from_database, 'ads_news' : ads_news, 'payment' : payment}
+    context={'news_list_all' : news_from_database, 'ads_news' : ads_news}
     return render(request, 'news.html', context)
 
 

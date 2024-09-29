@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block start %}
 
+
 <div class="container-xxl py-5 bg-primary hero-header mb-5">
   <div class="container my-5 py-5 px-lg-5">
     <div class="row g-5 py-5">
@@ -13,7 +14,8 @@
 </div>
 
 
-<div class="container">
+<!-- Header New Added after payment. -->
+<!-- <div class="container">
   <section class="border-bottom pb-4 mb-5">
     <div class="row gx-5">
       <div class="col-md-6 mb-4">
@@ -24,7 +26,6 @@
           </a>
         </div>
       </div>
-
       <div class="col-md-6 mb-4 text-center">
         <span class="badge bg-danger px-2 py-1 mb-3">News of the day</span>
         <h4><strong>{{ads_news.headline}}</strong></h4>
@@ -35,20 +36,17 @@
       </div>
     </div>
   </section>
-</div>
-<!--Section: News of the day-->
+</div> -->
 
 
-<!--Section: Content-->
+<!--ALL News Content-->
 <div class="container row">
   {% for news in news_list_all %}
   <!-- First Section -->
   <div class="col-lg-4 col-md-12 mb-lg-4 border mx-auto">
     <!-- Featured image -->
     <div class="bg-image hover-overlay shadow-1-strong ripple mb-4 pt-2" data-mdb-ripple-color="light">
-
       <img src="https://mdbootstrap.com/img/new/fluid/city/0{{ forloop.counter|add:9 }}.jpg" class="img-fluid" />
-
       <a href="#!">
         <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
       </a>
@@ -91,7 +89,7 @@
 
 
 
-<div class="text-center">
+<!-- <div class="text-center">
   <h2>Put your own News on the top of the page</h2>
   <button id="rzp-button1" type="button" class="btn btn-primary"> Add News of the day </button>
 </div>
@@ -130,4 +128,4 @@
     // e.preventDefault();
   }
 </script>
-{%endblock%}
+{%endblock%} -->
