@@ -1,3 +1,7 @@
+.container{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .text-center{
     align-items: center;
     justify-content: center;
