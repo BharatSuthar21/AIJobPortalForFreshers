@@ -1,9 +1,13 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from home.models import *
 from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout #login for storing session.
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
+import razorpay
+import requests
 
 
 def home(request):
