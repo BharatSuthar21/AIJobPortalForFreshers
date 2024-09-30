@@ -12,52 +12,45 @@
 </div>
 </div>
 
-<div class="container row">
-  {% for news in news_list_all %}
-  <!-- First Section -->
-  <div class="col-lg-4 col-md-12 mb-lg-4 border mx-auto">
-    <!-- Featured image -->
-    <div class="bg-image hover-overlay shadow-1-strong ripple mb-4 pt-2" data-mdb-ripple-color="light">
-      <img src="https://mdbootstrap.com/img/new/fluid/city/0{{ forloop.counter|add:9 }}.jpg" class="img-fluid" />
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <!-- Article data -->
-    <div class="row mb-3">
-      <div class="col-6">
-        <a href="" class="text-info">
-          {% if news.percent >= 50 %}
-          <h6 id='thumbs-up'
-            style="background-color: rgb(248, 38, 19); padding: 5px; color: black; text-align: center;">Likely To Be
-            Fake</h6>
-          {% else %}
-          <h6 id="thumbs-down"
-            style="background-color: rgb(67, 185, 28); padding: 5px; color: black; text-align: center;"> Good News</h6>
-          {%endif%}
+<div class="container-fluid">
+  <div class="row">
+    {% for news in news_list_all %}
+    <div class="col-lg-4 col-md-6 mb-4 border">
+      <div class="bg-image hover-overlay shadow-1-strong ripple mb-4 pt-2" data-mdb-ripple-color="light">
+        <img src="https://mdbootstrap.com/img/new/fluid/city/0{{ forloop.counter|add:9 }}.jpg" class="img-fluid" />
+        <a href="#!">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
         </a>
       </div>
-      <!-- <div class="col-3 d-flex fas fa-plane text-info"> -->
-      <div class="col-3 d-flex">
-        <h5 style="color: rgb(12, 12, 244);" class="justify-content-between "> Travels</h5>
+      <div class="row mb-3">
+        <div class="col-6">
+          <a href="" class="text-info text-decoration-none">
+            {% if news.percent >= 50 %}
+            <h6 id='thumbs-up'
+              style="background-color: rgb(248, 38, 19); padding: 5px; color: black; text-align: center;">Likely To Be
+              Fake</h6>
+            {% else %}
+            <h6 id="thumbs-down"
+              style="background-color: rgb(67, 185, 28); padding: 5px; color: black; text-align: center;"> Good News
+            </h6>
+            {% endif %}
+          </a>
+        </div>
+        <div class="col-3 d-flex">
+          <h5 style="color: rgb(12, 12, 244);" class="justify-content-between"> Travels</h5>
+        </div>
+        <div class="col-3 text-end">
+          <span style="color: green;"><i class="far fa-thumbs-up"></i>20</span> &nbsp;
+          <span style="color: red;"><i class="far fa-thumbs-down"></i>4</span> &nbsp;
+        </div>
       </div>
-      <div class="col-3 text-end">
-        <span style="color: green;"><i class="far fa-thumbs-up"></i>20</span> &nbsp;
-        <!-- <span><i class="far fa-thumbs-up"></i> {{ news.likes }}</span> -->
-        <span style="color: red;"><i class="far fa-thumbs-down"></i>4</span> &nbsp;
-        <!-- <span><i class="far fa-thumbs-down"></i> {{ news.dislikes }}</span> -->
-      </div>
+      <a href="{{ news.link }}" class="text-dark text-decoration-none">
+        <h5>{{ news.headline }}</h5>
+        <p>{{ news.summary }}</p>
+      </a>
     </div>
-    <!-- Article title and description -->
-    <a href="{{news.link}}" class="text-dark">
-      <h5>{{news.headline}}</h5>
-      <p>{{news.summary}}</p>
-    </a>
-    <!-- <a type="button" class="btn btn-primary" href="">Read morea</a> -->
-
+    {% endfor %}
   </div>
-  {% endfor %}
-
 </div>
 
 {%endblock%}

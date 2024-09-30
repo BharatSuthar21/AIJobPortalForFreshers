@@ -34,7 +34,7 @@ def contest(request):
 
 @login_required(login_url="/login/")
 def news(request):
-    news_from_database = News.objects.all()[101:161]
+    news_from_database = News.objects.all()[107:122]
     context={'news_list_all' : news_from_database}
     return render(request, 'news.html', context)
 
