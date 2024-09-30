@@ -1,7 +1,7 @@
-.container {
-    max-width: 100% !important;
+.text-center{
+    align-items: center;
+    justify-content: center;
 }
-
 .testimonial-carousel {
     display: flex;
     overflow: hidden;
