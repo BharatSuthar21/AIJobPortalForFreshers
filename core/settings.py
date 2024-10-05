@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'home',
+    'student',
+    'accounts',
+    'company',
 ]
 
 MIDDLEWARE = [
@@ -78,8 +82,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'AIJobPortal',
+        'USER': 'postgres',
+        'PASSWORD': 'bharat123',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -133,6 +141,7 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+SECURE_SSL_REDIRECT = False
 
 # load_dotenv()
 
@@ -140,3 +149,13 @@ KEY_ID="rzp_test_kRKmXIu82zMfJ1"
 # SECRET_KEY = os.getenv('SECRET_KEY_RAZORPAY')
 SECRET_KEY="mNdwGKAje4oeteHszcN7gUXc"
 
+
+
+# Remove or ensure the following settings are set to False
+SECURE_SSL_REDIRECT = False  # Ensure this is False
+SECURE_HSTS_SECONDS = 0       # Disable HSTS
+SECURE_HSTS_PRELOAD = False   # Disable HSTS preload
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False  # Disable subdomains HSTS
+SECURE_PROXY_SSL_HEADER = None  # Disable SSL proxy header
+CSRF_COOKIE_SECURE = False     # Cookies not secure
+SESSION_COOKIE_SECURE = False  # Session cookies not secure

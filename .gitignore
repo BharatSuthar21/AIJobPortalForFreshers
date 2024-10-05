@@ -26,3 +26,8 @@ venv/*
 .venv/*
 env/*
 .env/*
+
+home/migrations/__pycache__/
+company/migrations/__pycache__/
+student/migrations/__pycache__/
+account/migrations/__pycache__/

@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from company.models import NewsDetails
+from company.models import newsDetails
 
 class NewsDetailsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = NewsDetails
+        model = newsDetails
         fields = '__all__'

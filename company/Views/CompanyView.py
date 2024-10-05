@@ -1,12 +1,12 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from company.models import CompanyDetails
+from company.models import companyDetails
 from company.Serializers.CompanyDetailsSerializer import CompanyDetailsSerializer
 
 @api_view(['GET', 'POST'])
 def manage_company(request):
     if request.method == 'GET':
-        companies = CompanyDetails.objects.all()
+        companies = companyDetails.objects.all()
         serializer = CompanyDetailsSerializer(companies, many=True)
         return Response(serializer.data)
     

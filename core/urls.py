@@ -21,18 +21,14 @@ from home.views import *
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.urls import path, include
+
 
 urlpatterns = [
     path('', home, name='home'),
 
-    path('job/', job, name='job'),
-    path('internship/', internship, name='internship'),
-    path("contest/", contest, name='contest'),
-    path("news/", news, name='news'),
-
-    path("login/", login_page, name='login'),
-    path("logout/", logout_page, name='logout'),
-    path("signup/", signup, name='signup'),
+    path('api/', include('company.urls')),
+    path('auth/', include('accounts.urls')),
 
     path("contact/", contact, name='contact'),
 
