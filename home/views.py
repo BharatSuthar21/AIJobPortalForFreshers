@@ -14,29 +14,29 @@ def home(request):
     return render(request, 'index.html')
 
 
-@login_required(login_url="/login/")
-def job(request):
-    jobs_from_database = Job.objects.all()
-    return render(request, 'job.html', context={'job_list_all' : jobs_from_database})
+# @login_required(login_url="/login/")
+# def job(request):
+#     jobs_from_database = Job.objects.all()
+#     return render(request, 'job.html', context={'job_list_all' : jobs_from_database})
 
 
-@login_required(login_url="/login/")
-def internship(request):
-    jobs_from_database = Job.objects.all()
-    return render(request, 'internship.html', context={'job_list_all' : jobs_from_database})
+# @login_required(login_url="/login/")
+# def internship(request):
+#     jobs_from_database = Job.objects.all()
+#     return render(request, 'internship.html', context={'job_list_all' : jobs_from_database})
 
 
-@login_required(login_url="/login/")
-def contest(request):
-    contests_from_database = Contest.objects.filter(Q(id__range=(1, 24)) | Q(id__range=(131, 206)))  # if we need multiple slices.
-    return render(request, 'contest.html', context={'contest_list_all' : contests_from_database})
+# @login_required(login_url="/login/")
+# def contest(request):
+#     contests_from_database = Contest.objects.filter(Q(id__range=(1, 24)) | Q(id__range=(131, 206)))  # if we need multiple slices.
+#     return render(request, 'contest.html', context={'contest_list_all' : contests_from_database})
 
 
-@login_required(login_url="/login/")
-def news(request):
-    news_from_database = News.objects.all()[107:122]
-    context={'news_list_all' : news_from_database}
-    return render(request, 'news.html', context)
+# @login_required(login_url="/login/")
+# def news(request):
+#     news_from_database = News.objects.all()[107:122]
+#     context={'news_list_all' : news_from_database}
+#     return render(request, 'news.html', context)
 
 
 def contact(request):
